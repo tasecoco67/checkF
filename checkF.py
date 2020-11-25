@@ -53,9 +53,7 @@ def writegs():
     #2つのAPIを記述しないとリフレッシュトークンを3600秒毎に発行し続けなければならない
     scope = ['https://spreadsheets.google.com/feeds','https://www.googleapis.com/auth/drive']
 
-    credential = {
-      setting.CREDEANTIAL
-    }
+    credential = setting.CREDEANTIAL
 
     credentials = ServiceAccountCredentials.from_json_keyfile_dict(credential, scope)
 
