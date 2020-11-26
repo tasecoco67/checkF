@@ -5,6 +5,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 TWR = os.environ.get("TWURL")
+INU = os.environ.get("INU")
 NUR = os.environ.get("NTURL")
 NUR2 = os.environ.get("NTURL2")
 MAIL = os.environ.get("MAIL")

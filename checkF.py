@@ -10,14 +10,14 @@ driver = webdriver.Chrome()
 def twfcheck():
     driver.get(setting.TWR)
     time.sleep(5)
-    twf = driver.find_element_by_xpath(r'//*[@id="react-root"]/div/div/div[2]/main/div/div/div/div/div/div[2]/div/div/div[1]/div/div[5]/div[2]/a/span[1]/span').text
+    twf = driver.find_element_by_xpath(r"//*[@id='react-root']/div/div/div[2]/main/div/div/div/div/div/div[2]/div/div/div[1]/div/div[5]/div[2]/a/span[1]/span").text
     return twf;
 #twfcheck();
 
 def infcheck():
-    driver.get('https://www.instagram.com/kaiminasse/?hl=ja')
+    driver.get(setting.INU)
     time.sleep(5);
-    inf=driver.find_element_by_xpath(r'//*[@id="react-root"]/section/main/div/header/section/ul/li[2]/a/span').text
+    inf=driver.find_element_by_xpath(r"//*[@id='react-root']/section/main/div/header/section/ul/li[2]/a/span").text
     return inf;
 #infcheck()
 
