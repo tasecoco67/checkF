@@ -17,7 +17,7 @@ def twfcheck():
 def infcheck():
     driver.get(setting.INU)
     time.sleep(5);
-    inf=driver.find_element_by_xpath(r"//*[@id='react-root']/section/main/div/header/section/ul/li[2]/a/span").text
+    inf=driver.find_element_by_class_name("g47SY ").text
     return inf;
 #infcheck()
 
