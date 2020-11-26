@@ -76,10 +76,10 @@ def writegs():
     worksheet1 = workbook.worksheet('insta')
     worksheet2 = workbook.worksheet('note')
     worksheet3 = workbook.worksheet('twitter')
+    worksheet3.update_acell("G2", twfcheck())
     worksheet1.update_acell("I2", infcheck())
     worksheet2.update_acell("G2", ntfcheck())
     m = ntvcheck()
     worksheet2.update_acell("F5", m[0])
     worksheet2.update_acell("G5", m[1])
-    worksheet3.update_acell("G2", twfcheck())
 writegs();
