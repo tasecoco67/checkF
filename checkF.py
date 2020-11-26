@@ -53,16 +53,19 @@ def writegs():
     #2つのAPIを記述しないとリフレッシュトークンを3600秒毎に発行し続けなければならない
     scope = ['https://spreadsheets.google.com/feeds','https://www.googleapis.com/auth/drive']
 
-    credential = {"type": "service_account",
-      "project_id": "snsfollow",
-      "private_key_id": setting.PKI,
-      "private_key": setting.PKI,
-      "client_email": setting.CEMAIL,
-      "client_id": setting.CID,
-      "auth_uri": "https://accounts.google.com/o/oauth2/auth",
-      "token_uri": "https://oauth2.googleapis.com/token",
-      "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
-      "client_x509_cert_url": setting.CCU}
+    credential = {
+  "type": "service_account",
+  "project_id": "snsfollow",
+  "private_key_id": setting.PKI,
+  "private_key": "-----BEGIN PRIVATE KEY-----\n"+setting.PK+"\n-----END PRIVATE KEY-----\n",
+  "client_email": setting.CEMAIL,
+  "client_id": setting.CID,
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": setting.CCU
+}
+
 
     credentials = ServiceAccountCredentials.from_json_keyfile_dict(credential, scope)
 
