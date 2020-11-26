@@ -6,6 +6,8 @@ load_dotenv()
 
 TWR = os.environ.get("TWURL")
 INU = os.environ.get("INU")
+USERNAME = os.environ.get("USERNAME")
+IPW = os.environ.get("IPW")
 NUR = os.environ.get("NTURL")
 NUR2 = os.environ.get("NTURL2")
 MAIL = os.environ.get("MAIL")

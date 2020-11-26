@@ -19,6 +19,15 @@ def infcheck():
     cur_url = driver.current_url
     print(cur_url);
     time.sleep(3);
+    driver.get("https://www.instagram.com/?hl=ja")
+    time.sleep(3)
+    driver.find_element_by_name('username').send_keys(setting.USERNAME)
+    driver.find_element_by_name('password').send_keys(setting.IPW)
+    #ログインボタンを押す。
+    driver.find_element_by_xpath(r'//*[@id="loginForm"]/div/div[3]/button/div').click()
+    time.sleep(4)
+    driver.get("https://www.instagram.com/"+setting.USERNAME+"/")
+    time.sleep(3);
     inf=driver.find_element_by_class_name("g47SY ").text
     return inf;
 #infcheck()
