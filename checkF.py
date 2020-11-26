@@ -9,21 +9,21 @@ driver = webdriver.Chrome()
 
 def twfcheck():
     driver.get(setting.TWR)
-    time.sleep(2)
+    time.sleep(5)
     twf = driver.find_element_by_xpath(r'//*[@id="react-root"]/div/div/div[2]/main/div/div/div/div/div/div[2]/div/div/div[1]/div/div[5]/div[2]/a/span[1]/span').text
     return twf;
 #twfcheck();
 
 def infcheck():
-    driver.get(setting.IUR)
-    time.sleep(2);
+    driver.get('https://www.instagram.com/kaiminasse/?hl=ja')
+    time.sleep(5);
     inf=driver.find_element_by_xpath(r'//*[@id="react-root"]/section/main/div/header/section/ul/li[2]/a/span').text
     return inf;
 #infcheck()
 
 def ntfcheck():
     driver.get(setting.NUR)
-    time.sleep(2)
+    time.sleep(5)
     ntf=driver.find_element_by_xpath(r'//*[@id="__layout"]/div/main/header/div/div[2]/div/div[2]/div[2]/div/div/div[1]/a[2]/span[1]').text
     return ntf;
 
@@ -33,11 +33,11 @@ def ntvcheck():
     driver.find_element_by_name('password').send_keys(setting.PSW)
     #ログインボタンをクリック
     driver.find_element_by_xpath(r'/html/body/main/login/div/section/div/div/form/button').click()
-    time.sleep(3);
+    time.sleep(4);
     driver.get(setting.NUR3)
-    time.sleep(2);
+    time.sleep(3);
     driver.find_element_by_xpath(r'//*[@id="__layout"]/div/div[2]/div[2]/div/div/div/div[1]/div[1]/ul/li[3]/button').click()
-    time.sleep(2)
+    time.sleep(3)
     nv = driver.find_element_by_xpath(r'//*[@id="__layout"]/div/div[2]/div[2]/div/div/div/div[2]/div[1]/div[2]').text
     ng = driver.find_element_by_xpath(r'//*[@id="__layout"]/div/div[2]/div[2]/div/div/div/div[2]/div[3]/div[2]').text
     return nv,ng
